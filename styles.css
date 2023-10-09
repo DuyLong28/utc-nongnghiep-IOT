@@ -1214,9 +1214,9 @@ input:checked ~ .slider_led2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1.4em;
-    width: 1.4em;
-    border-radius: 0.7em;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 0.5em;
     right: 0.3em;
     transition: all 0.3s;
     text-decoration: none;

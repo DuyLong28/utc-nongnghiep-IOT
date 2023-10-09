@@ -740,7 +740,7 @@ footer {
     }
     table.header td {
         width: 100%;
-        font-size: 8px;
+        font-size: 2px;
     }
     table.header .logo {
         max-width: 100%;

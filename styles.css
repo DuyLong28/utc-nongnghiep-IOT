@@ -740,7 +740,7 @@ footer {
     }
     table.header td {
         width: 100%;
-        font-size: 2px;
+        font-size: 8px;
     }
     table.header .logo {
         max-width: 100%;
@@ -748,7 +748,7 @@ footer {
     }
     .menu {
         width: 20%;
-        height: 88%;
+        height: 95%;
         position: relative;
         font-size: 3vw;
     }

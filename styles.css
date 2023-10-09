@@ -755,10 +755,27 @@ footer {
         font-size: 3vw;
     }
     .mucluc{
-        font-size: 8px;
+        font-size: 0.5rem;
     }
     .value{
-        font-size: 8px;
+        font-size: 0.5rem;
+    }
+    .value.active {
+        background-color: #ffffff;
+        /* Màu trắng khi nút có lớp 'active' */
+        border: none;
+        padding: 0.5rem;
+        color: #00BF63;
+        text-align: center;
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 0.5rem;
+        border-radius: 5px;
+    }
+    .value:hover {
+        background-color: #ffffff;
+        color: #00BF63;
+        border-radius: 5px;
     }
     .background {
         width: 80%;
@@ -826,4 +843,454 @@ footer {
         top: 5%;
         font-size: 10px;
     }
+    /*Thuộc tính Nhiệt độ*/
+.data_nhietdo{
+    background-color: #e17979;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_nhietdo{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.value_nhietdo{
+    color:#03030a;
+    font-size: 1.9rem;
+    line-height: 2.7rem;
+    text-align: left;
+}
+/*Thuộc tính Độ ẩm*/
+.data_doam{
+    background-color: #79a6e1;
+    position: absolute;
+    top: 6rem;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_doam{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.value_doam{
+    color:#03030a;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+}
+/*Thuộc tính Độ ẩm đất*/
+.data_doamdat{
+    background-color: #8f764e;
+    position: absolute;
+    left: 13rem;
+    top: 0;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_doamdat{
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
+    text-align: left;
+}
+.value_doamdat{
+    color:#03030a;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+}
+/*Thuộc tính bật tắt Máy bơm*/
+.maybom{
+    background-color: #79a6e1;
+    position: absolute;
+    top: 12rem;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_maybom{
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*On-Off*/
+.switch_maybom {
+    --circle-dim: 1.4em;
+    font-size: 17px;
+    position: absolute;
+    right: 16px;
+    bottom: 23px;
+    width: 3.5em;
+    height: 2em;
+} 
+/* Hide default HTML checkbox */
+.switch_maybom input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+/* The slider */
+.slider_maybom {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5aeae;
+    transition: .4s;
+    border-radius: 30px;
+} 
+.slider-card_maybom {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transition: .4s;
+    pointer-events: none;
+  }
+  
+.slider-card-face_maybom {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    border-radius: 50%;
+    transition: .4s transform;
+} 
+.slider-card-front_maybom {
+    background-color: #DC3535;
+}  
+.slider-card-back_maybom {
+    background-color: #379237;
+    transform: rotateY(180deg);
+} 
+input:checked ~ .slider-card_maybom .slider-card-back_maybom {
+    transform: rotateY(0);
+}  
+input:checked ~ .slider-card_maybom .slider-card-front_maybom {
+    transform: rotateY(-180deg);
+}
+input:checked ~ .slider-card_maybom {
+    transform: translateX(1.5em);
+} 
+input:checked ~ .slider_maybom {
+    background-color: #9ed99c;
+}
+
+/*Thuộc tính Quạt gió*/
+.quatgio{
+    background-color: #79a6e1;
+    position: absolute;
+    top: 12rem;
+    left: 13rem;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_quatgio{
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*On-Off*/
+.switch_quatgio {
+    --circle-dim: 1.4em;
+    font-size: 17px;
+    position: absolute;
+    right: 16px;
+    bottom: 23px;
+    width: 3.5em;
+    height: 2em;
+} 
+/* Hide default HTML checkbox */
+.switch_quatgio input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+/* The slider */
+.slider_quatgio {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5aeae;
+    transition: .4s;
+    border-radius: 30px;
+} 
+.slider-card_quatgio {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transition: .4s;
+    pointer-events: none;
+  }
+  
+.slider-card-face_quatgio {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    border-radius: 50%;
+    transition: .4s transform;
+} 
+.slider-card-front_quatgio {
+    background-color: #DC3535;
+}  
+.slider-card-back_quatgio {
+    background-color: #379237;
+    transform: rotateY(180deg);
+} 
+input:checked ~ .slider-card_quatgio .slider-card-back_quatgio {
+    transform: rotateY(0);
+}  
+input:checked ~ .slider-card_quatgio .slider-card-front_quatgio {
+    transform: rotateY(-180deg);
+}
+input:checked ~ .slider-card_quatgio {
+    transform: translateX(1.5em);
+} 
+input:checked ~ .slider_quatgio {
+    background-color: #9ed99c;
+}
+/*Thuộc tính LED 1*/
+.led1{
+    background-color: #79a6e1;
+    position: absolute;
+    top: 18rem;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_led1{
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*On-Off*/
+.switch_led1 {
+    --circle-dim: 1.4em;
+    font-size: 17px;
+    position: absolute;
+    right: 16px;
+    bottom: 23px;
+    width: 3.5em;
+    height: 2em;
+} 
+/* Hide default HTML checkbox */
+.switch_led1 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+/* The slider */
+.slider_led1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5aeae;
+    transition: .4s;
+    border-radius: 30px;
+} 
+.slider-card_led1 {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transition: .4s;
+    pointer-events: none;
+  }
+  
+.slider-card-face_led1 {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    border-radius: 50%;
+    transition: .4s transform;
+} 
+.slider-card-front_led1 {
+    background-color: #DC3535;
+}  
+.slider-card-back_led1 {
+    background-color: #379237;
+    transform: rotateY(180deg);
+} 
+input:checked ~ .slider-card_led1 .slider-card-back_led1 {
+    transform: rotateY(0);
+}  
+input:checked ~ .slider-card_led1 .slider-card-front_led1 {
+    transform: rotateY(-180deg);
+}
+input:checked ~ .slider-card_led1 {
+    transform: translateX(1.5em);
+} 
+input:checked ~ .slider_led1 {
+    background-color: #9ed99c;
+}
+/*Thuộc tính LED 2*/
+.led2{
+    background-color: #79a6e1;
+    position: absolute;
+    top: 18rem;
+    left: 13rem;
+    width: 12.5rem;
+    height: 5.1rem;
+    border-radius: 10px;
+}
+.content_led2{
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*On-Off*/
+.switch_led2 {
+    --circle-dim: 1.4em;
+    font-size: 17px;
+    position: absolute;
+    right: 16px;
+    bottom: 23px;
+    width: 3.5em;
+    height: 2em;
+} 
+/* Hide default HTML checkbox */
+.switch_led2 input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+} 
+/* The slider */
+.slider_led2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f5aeae;
+    transition: .4s;
+    border-radius: 30px;
+} 
+.slider-card_led2 {
+    position: absolute;
+    content: "";
+    height: var(--circle-dim);
+    width: var(--circle-dim);
+    border-radius: 20px;
+    left: 0.3em;
+    bottom: 0.3em;
+    transition: .4s;
+    pointer-events: none;
+  }
+  
+.slider-card-face_led2 {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    perspective: 1000px;
+    border-radius: 50%;
+    transition: .4s transform;
+} 
+.slider-card-front_led2 {
+    background-color: #DC3535;
+}  
+.slider-card-back_led2 {
+    background-color: #379237;
+    transform: rotateY(180deg);
+} 
+input:checked ~ .slider-card_led2 .slider-card-back_led2 {
+    transform: rotateY(0);
+}  
+input:checked ~ .slider-card_led2 .slider-card-front_led2 {
+    transform: rotateY(-180deg);
+}
+input:checked ~ .slider-card_led2 {
+    transform: translateX(1.5em);
+} 
+input:checked ~ .slider_led2 {
+    background-color: #9ed99c;
+}
+/*Button xem video trực tiếp*/
+.button_video {
+    background: #ff0000;
+    color: white;
+    padding-left: 10px;
+    padding-right: 50px;
+    font-size: 17px;
+    border-radius: 0.9em;
+    border: none;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    top: 550px;
+    left: 1090px;
+    height: 2.8em;
+}
+.button_video_content{
+    font-size: 18px;
+    width: 110px;
+}
+.button_video .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    right: 0.3em;
+    transition: all 0.3s;
+    text-decoration: none;
+} 
+.fa-video{
+    background: #ffffff;
+    color: #000000;
+}
+.button_video:hover .icon {
+    width: calc(100% - 0.6em);
+}  
+.button_video .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #ff0000;
+}  
+.button_video:hover .icon svg {
+    transform: translateX(0.1em);
+}  
+.button_video:active .icon {
+    transform: scale(0.95);
+}
 }

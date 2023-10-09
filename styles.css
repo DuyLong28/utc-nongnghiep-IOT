@@ -20,6 +20,7 @@ table.header td {
     vertical-align: middle;
     border: 1px solid #000;
     width: 50%;
+    font-size: 22px;
 }
 
 /* Định dạng vùng hình ảnh logo */
@@ -32,9 +33,6 @@ table.header .logo {
     height: auto; /* Thay đổi kích thước tùy theo nội dung */
 }
 
-table.title{
-    font-size: 22px;
-}
 /* Thuộc tính menu */
 .menu {
     display: flex;
@@ -742,9 +740,7 @@ footer {
     }
     table.header td {
         width: 100%;
-    }
-    table.title{
-        font-size:5px;
+        font-size: 2px;
     }
     table.header .logo {
         max-width: 100%;

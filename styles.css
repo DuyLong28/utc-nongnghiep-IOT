@@ -30,7 +30,6 @@ table.header .logo {
     display: flex;
     position: absolute;
     left: 0;
-    top: 11.4%;
     flex-direction: column;
     width: 15%;
     height: 100%;

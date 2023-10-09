@@ -134,8 +134,8 @@ table.header .logo {
 }
 .value_doam{
     color:#03030a;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 1.9rem;
+    line-height: 2.7rem;
     text-align: left;
 }
 /*Thuộc tính Độ ẩm đất*/
@@ -156,8 +156,8 @@ table.header .logo {
 }
 .value_doamdat{
     color:#03030a;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 1.9rem;
+    line-height: 2.7rem;
     text-align: left;
 }
 /*Thuộc tính bật tắt Máy bơm*/
@@ -787,63 +787,67 @@ table.header .logo {
 /*Thuộc tính Nhiệt độ*/
 .data_nhietdo{
     background-color: #e17979;
-    width: 12.5rem;
-    height: 5.1rem;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
 }
 .content_nhietdo{
     padding-left: 0.5rem;
     padding-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     text-align: left;
 }
 .value_nhietdo{
     color:#03030a;
-    font-size: 1.9rem;
-    line-height: 2.7rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
     text-align: left;
 }
 /*Thuộc tính Độ ẩm*/
 .data_doam{
     background-color: #79a6e1;
     position: absolute;
-    top: 6rem;
-    width: 12.5rem;
-    height: 5.1rem;
+    top: 90%;
+    left: 10%;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_doam{
     padding-left: 0.5rem;
     padding-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     text-align: left;
 }
 .value_doam{
     color:#03030a;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 1.8rem;
+    line-height: 2rem;
     text-align: left;
 }
 /*Thuộc tính Độ ẩm đất*/
 .data_doamdat{
     background-color: #8f764e;
     position: absolute;
-    left: 13rem;
-    top: 0;
-    width: 12.5rem;
-    height: 5.1rem;
+    left: 170%;
+    top: 10%;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_doamdat{
     padding-left: 0.5rem;
     padding-top: 0.5rem;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     text-align: left;
 }
 .value_doamdat{
     color:#03030a;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 1.8rem;
+    line-height: 2rem;
     text-align: left;
 }
 /*Thuộc tính bật tắt Máy bơm*/
@@ -851,8 +855,8 @@ table.header .logo {
     background-color: #79a6e1;
     position: absolute;
     top: 12rem;
-    width: 12.5rem;
-    height: 5.1rem;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_maybom{
@@ -936,8 +940,8 @@ input:checked ~ .slider_maybom {
     position: absolute;
     top: 12rem;
     left: 13rem;
-    width: 12.5rem;
-    height: 5.1rem;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_quatgio{
@@ -1019,8 +1023,8 @@ input:checked ~ .slider_quatgio {
     background-color: #79a6e1;
     position: absolute;
     top: 18rem;
-    width: 12.5rem;
-    height: 5.1rem;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_led1{
@@ -1103,8 +1107,8 @@ input:checked ~ .slider_led1 {
     position: absolute;
     top: 18rem;
     left: 13rem;
-    width: 12.5rem;
-    height: 5.1rem;
+    width: 9rem;
+    height: 4rem;
     border-radius: 10px;
 }
 .content_led2{

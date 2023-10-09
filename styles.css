@@ -616,7 +616,7 @@ input:checked ~ .slider_led2 {
     align-items: center;
     overflow: hidden;
     position: absolute;
-    top: 580px;
+    top: 550px;
     left: 1090px;
     height: 2.8em;
 }

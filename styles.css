@@ -49,30 +49,30 @@ table.header .logo {
     font-weight: bold;
     text-align:center;
     color:white;
-    padding: 15px;
+    padding: 1rem;
     border-bottom-style: solid;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 .value {
     background-color: #00BF63;
     border: none;
-    padding: 20px;
+    padding: 1rem;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 1rem;
 }
 .value.active {
     background-color: #ffffff;
     /* Màu trắng khi nút có lớp 'active' */
     border: none;
-    padding: 20px;
+    padding: 1rem;
     color: #00BF63;
     text-align: center;
     font-weight: bold;
     font-family: Arial;
-    font-size: 15px;
+    font-size: 1rem;
     border-radius: 5px;
 }
 .value:hover {
@@ -101,35 +101,35 @@ table.header .logo {
 /*Thuộc tính Nhiệt độ*/
 .data_nhietdo{
     background-color: #e17979;
-    width: 200px;
-    height: 80px;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_nhietdo{
-    padding-left: 10;
-    padding-top: 10;
-    font-size: 18;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
     text-align: left;
 }
 .value_nhietdo{
     color:#03030a;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 1.9rem;
+    line-height: 2.7rem;
     text-align: left;
 }
 /*Thuộc tính Độ ẩm*/
 .data_doam{
     background-color: #79a6e1;
     position: absolute;
-    top: 90;
-    width: 200px;
-    height: 80px;
+    top: 6rem;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_doam{
-    padding-left: 10;
-    padding-top: 10;
-    font-size: 18;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
     text-align: left;
 }
 .value_doam{
@@ -142,16 +142,16 @@ table.header .logo {
 .data_doamdat{
     background-color: #8f764e;
     position: absolute;
-    left: 210px;
+    left: 13rem;
     top: 0;
-    width: 200px;
-    height: 80px;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_doamdat{
-    padding-left: 10;
-    padding-top: 10;
-    font-size: 18;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-size: 1.25rem;
     text-align: left;
 }
 .value_doamdat{
@@ -164,16 +164,16 @@ table.header .logo {
 .maybom{
     background-color: #79a6e1;
     position: absolute;
-    top: 180;
-    width: 200px;
-    height: 80px;
+    top: 12rem;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_maybom{
     position: absolute;
-    top: 26px;
-    left: 10px;
-    font-size: 23px;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 /*On-Off*/
@@ -372,17 +372,17 @@ input:checked ~ .slider_maybom {
 .quatgio{
     background-color: #79a6e1;
     position: absolute;
-    top: 180px;
-    left: 210px;
-    width: 200px;
-    height: 80px;
+    top: 12rem;
+    left: 13rem;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_quatgio{
     position: absolute;
-    top: 26px;
-    left: 10px;
-    font-size: 23px;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 /*On-Off*/
@@ -456,16 +456,16 @@ input:checked ~ .slider_quatgio {
 .led1{
     background-color: #79a6e1;
     position: absolute;
-    top: 270;
-    width: 200px;
-    height: 80px;
+    top: 18rem;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_led1{
     position: absolute;
-    top: 26px;
-    left: 10px;
-    font-size: 23px;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 /*On-Off*/
@@ -539,17 +539,17 @@ input:checked ~ .slider_led1 {
 .led2{
     background-color: #79a6e1;
     position: absolute;
-    top: 270;
-    left: 210px;
-    width: 200px;
-    height: 80px;
+    top: 18rem;
+    left: 13rem;
+    width: 12.5rem;
+    height: 5.1rem;
     border-radius: 10px;
 }
 .content_led2{
     position: absolute;
-    top: 26px;
-    left: 10px;
-    font-size: 23px;
+    top: 33%;
+    left: 5%;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 /*On-Off*/

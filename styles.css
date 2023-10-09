@@ -780,7 +780,7 @@ table.header .logo {
     width: 80%;
     height: 80%;
     position: absolute;
-    top: 12%;
+    top: 10%;
     left: 20%;
 }
 
@@ -1244,6 +1244,11 @@ input:checked ~ .slider_led2 {
 .device-table td {
     font-size: 0.5rem;
     padding: 0.6rem;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .anh{
     width: 4rem;

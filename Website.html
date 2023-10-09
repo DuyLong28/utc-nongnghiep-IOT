@@ -1,0 +1,238 @@
+<head>
+    <html lang="en">
+    <title>Giám sát nông nghiệp thông minh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" >
+    <link rel="icon" href="data:">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <table class="header">
+            <tbody>
+                <td><img class="logo" src="Picture/header.png"></td>
+                <td style="font-weight: bold; font-family: Arial; font-size: 22px">HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH BẰNG IOT</td>
+            </tbody>
+        </table>
+    </div>
+    <div class="menu">
+            <a 
+            style=" font-weight: bold;
+                    text-align:center;
+                    color:white;
+                    padding: 15px;
+                    border-bottom-style: solid;"
+            >MỤC LỤC</a>
+            <button class="value" onclick="showContent('gioithieu', event)">GIỚI THIỆU</button>
+            <button class="value" onclick="showContent('giamsat', event)">GIÁM SÁT</button>
+            <button class="value" onclick="showContent('phantich', event)">PHÂN TÍCH</button>
+            <button class="value" onclick="showContent('dulieu', event)">DỮ LIỆU</button>
+            <button class="value" onclick="showContent('thietbi', event)">THIẾT BỊ</button>
+    </div>
+    <div class="background">
+        <div id="gioithieu" class="content" style="display: none;">
+            <!-- Nội dung giới thiệu -->
+            <p>Đây là nội dung giới thiệu.</p>
+        </div>
+        <div id="giamsat" class="content" style="display: none;">
+            <!-- Nội dung giám sát -->
+            <div class="data_nhietdo" style="font-family: Arial;">
+                <div class="content_nhietdo">
+                        <span>NHIỆT ĐỘ</span>
+                    <div class="value_nhietdo">
+                        <span>35</span>
+                        <span>&deg;C</span>
+                    </div>
+                </div>
+            </div>
+            <div class="data_doam" style="font-family: Arial;">
+                <div class="content_doam">
+                        <span>ĐỘ ẨM KHÔNG KHÍ</span>
+                    <div class="value_doam">
+                        <span>85</span>
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="data_doamdat" style="font-family: Arial;">
+                <div class="content_doamdat">
+                        <span>ĐỘ ẨM ĐẤT</span>
+                    <div class="value_doamdat">
+                        <span>40</span>
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="maybom" id="maybom">
+                <a class="content_maybom" style="font-family: Arial;">Máy bơm</a>
+                <!-- <label class="switch_maybom">
+                    <input type="checkbox" checked="checked_maybom">
+                    <div class="button_maybom">
+                      <div class="light_maybom"></div>
+                      <div class="dots_maybom"></div>
+                      <div class="characters_maybom"></div>
+                      <div class="shine_maybom"></div>
+                      <div class="shadow_maybom"></div>
+                    </div>
+                </label> -->
+                <label class="switch_maybom">
+                    <input type="checkbox">
+                    <div class="slider_maybom"></div>
+                    <div class="slider-card_maybom">
+                        <div class="slider-card-face_maybom slider-card-front_maybom"></div>
+                        <div class="slider-card-face_maybom slider-card-back_maybom"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="quatgio" id="quatgio">
+                <a class="content_quatgio" style="font-family: Arial;">Quạt gió</a>
+                <label class="switch_quatgio">
+                    <input type="checkbox">
+                    <div class="slider_quatgio"></div>
+                    <div class="slider-card_quatgio">
+                        <div class="slider-card-face_quatgio slider-card-front_quatgio"></div>
+                        <div class="slider-card-face_quatgio slider-card-back_quatgio"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="led1" id="led1">
+                <a class="content_led1" style="font-family: Arial;">Đèn 1</a>
+                <label class="switch_led1">
+                    <input type="checkbox">
+                    <div class="slider_led1"></div>
+                    <div class="slider-card_led1">
+                        <div class="slider-card-face_led1 slider-card-front_led1"></div>
+                        <div class="slider-card-face_led1 slider-card-back_led1"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="led2" id="led2">
+                <a class="content_led2" style="font-family: Arial;">Đèn 2</a>
+                <label class="switch_led2">
+                    <input type="checkbox">
+                    <div class="slider_led2"></div>
+                    <div class="slider-card_led2">
+                        <div class="slider-card-face_led2 slider-card-front_led2"></div>
+                        <div class="slider-card-face_led2 slider-card-back_led2"></div>
+                    </div>
+                </label>
+            </div>
+            <button class="button_video">
+                <div class="button_video_content" style="font-family: Arial;">Xem trực tiếp</div>
+                <a class="icon"  href="http://192.168.1.224/">
+                    <i class="fas fa-video"></i>
+                </a>
+            </button>
+        </div>
+        <div id="phantich" class="content" style="display: none;">
+            <!-- Nội dung giám sát -->
+            <p>Đây là nội dung phân tích.</p>
+        </div>
+        <div id="dulieu" class="content" style="display: none;">
+            <!-- Nội dung giám sát -->
+            <p>Đây là nội dung dữ liệu.</p>
+        </div>
+        <div id="thietbi" class="content" style="display: none;">
+            <div class="table-container">
+                <table class="device-table">
+                    <tbody>
+                        <!-- Thêm dữ liệu cho từng dòng của bảng ở đây -->
+                        <tr style="font-weight:bold">
+                            <td>STT</td>
+                            <td>Tên thiết bị</td>
+                            <td>Thông tin</td>
+                            <td>Hình ảnh</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Module ESP32-Cam</td>
+                            <td>Esp32-Cam là một module dựa trên SoC ESP32 mạnh mẽ, được thiết kế để có thể gắn Module Camera để thực hiện các dự án với thu thập hình ảnh, stream video chất lượng trung bình, phù hợp cho một số dự án IoT về giám sát và theo dõi.</td>
+                            <td><img src="Picture/esp32.jpg" title="ESP32-Cam"  class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Module ESP8266</td>
+                            <td>ESP8266 là một hệ thống trên chip (SoC). Bao gồm bộ vi điều khiển Tensilica L106 32-bit (MCU) và bộ thu phát Wi-Fi.</td>
+                            <td><img src="Picture/esp8266.jpg" title="ESP8266" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>DHT11</td>
+                            <td>Cảm biến đo nhiệt độ, độ ẩm</td>
+                            <td><img src="Picture/DHT11.jpg" title="DHT11" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Soil Moisture Sensor</td>
+                            <td>Cảm biến đo độ ẩm đất</td>
+                            <td><img src="Picture/doamdat.jpg" title="Soil Moisture Sensor" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Rain Water Sensor</td>
+                            <td>Cảm biến báo mưa</td>
+                            <td><img src="Picture/mua.jpg" title="Rain Water Sensor" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Servo</td>
+                            <td>Động cơ servo</td>
+                            <td><img src="Picture/servo.jpg" title="Servo" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>LDR Light Sensor Module</td>
+                            <td>Cảm biến ánh sáng dùng quang trở</td>
+                            <td><img src="Picture/quangtro.jpg" title="Light Sensor Module" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Thiết bị 8</td>
+                            <td>Thông tin thiết bị 8</td>
+                            <td><img src="link_hinh_anh_2.jpg" title="Hình ảnh thiết bị 2" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Thiết bị 9</td>
+                            <td>Thông tin thiết bị 9</td>
+                            <td><img src="link_hinh_anh_2.jpg" title="Hình ảnh thiết bị 2" class="anh"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Thiết bị 10</td>
+                            <td>Thông tin thiết bị 10</td>
+                            <td><img src="link_hinh_anh_2.jpg" title="Hình ảnh thiết bị 2" class="anh"></td>
+                        </tr>                        
+                        <!-- Thêm các dòng dữ liệu khác tương tự -->
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div style="font-family: Arial;" class="infor">
+                <a style="font-weight: bold;">THÔNG TIN</a>
+                <a><br><br>ĐỀ TÀI NGHIÊN CỨU KHOA HỌC 2023 - 2024 <br>
+                TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI <br>KHOA ĐIỆN - ĐIỆN TỬ</a>
+            </div>
+            <div class="sinhvien">
+                <a style="font-weight:bold">SINH VIÊN THỰC HIỆN<br></a>
+                <a><br> - Đào Duy Long
+                <br>- Phạm Tuệ Lĩnh
+                <br>- Bùi Trung Hiếu
+                <br>- Đỗ Việt Anh</a>
+            </div>
+            <div class="more" style="font-family: Arial">
+                <a style="font-weight: bold">TÀI LIỆU THAM KHẢO<br></a>
+                <a href=""><br>Link thêm sau</a>
+                <a href=""><br>Link thêm sau</a>
+                <a href=""><br>Link thêm sau</a>
+                <a href=""><br>Link thêm sau</a>
+            </div>
+        </div>
+    </footer>  
+</body> 

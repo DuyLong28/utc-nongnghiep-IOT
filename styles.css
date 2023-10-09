@@ -734,7 +734,7 @@ footer {
     color: #007bff; /* Màu chữ khi hover chuột */
 }
 /* CSS cho điện thoại di động */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     /* Đặt các thuộc tính CSS dành cho điện thoại di động ở đây */
     table.header{
         height: 10%;
@@ -762,9 +762,8 @@ footer {
     }
     .value.active {
         background-color: #ffffff;
-        /* Màu trắng khi nút có lớp 'active' */
         border: none;
-        padding: 0.5rem;
+        padding: 1rem;
         color: #00BF63;
         text-align: center;
         font-weight: bold;
@@ -779,7 +778,7 @@ footer {
     }
     .background {
         width: 80%;
-        height: 87%;
+        height: 80%;
         position: absolute;
         top: 12%;
         left: 20%;
@@ -803,11 +802,15 @@ footer {
     .table-container {
         padding-top: 20%;
         padding-left: 30%;
-        width: 440px;
+        width: 25rem;
     }
     .device-table {
         width: 100%;
         border-collapse: collapse;
+    }
+    .device-table td {
+        font-size: 0.5rem;
+        padding: 0.6rem;
     }
     footer {
         background-color: #d9d9d9;

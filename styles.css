@@ -854,28 +854,29 @@ table.header .logo {
 .maybom{
     background-color: #79a6e1;
     position: absolute;
-    top: 12rem;
+    top: 170%;
+    left: 10%;
     width: 9rem;
     height: 4rem;
     border-radius: 10px;
 }
 .content_maybom{
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 5%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 /*On-Off*/
 .switch_maybom {
-    --circle-dim: 1.4em;
+    --circle-dim: 1em;
     font-size: 17px;
     position: absolute;
-    right: 16px;
-    bottom: 23px;
-    width: 3.5em;
-    height: 2em;
-} 
+    right: 4%;
+    bottom: 1.2rem;
+    width: 3.1em;
+    height: 1.5em;
+}
 /* Hide default HTML checkbox */
 .switch_maybom input {
     opacity: 0;
@@ -938,28 +939,28 @@ input:checked ~ .slider_maybom {
 .quatgio{
     background-color: #79a6e1;
     position: absolute;
-    top: 12rem;
-    left: 13rem;
+    top: 170%;
+    left: 170%;
     width: 9rem;
     height: 4rem;
     border-radius: 10px;
 }
 .content_quatgio{
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 5%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 /*On-Off*/
 .switch_quatgio {
-    --circle-dim: 1.4em;
+    --circle-dim: 1em;
     font-size: 17px;
     position: absolute;
-    right: 16px;
-    bottom: 23px;
-    width: 3.5em;
-    height: 2em;
+    right: 4%;
+    bottom: 1.2rem;
+    width: 3.1em;
+    height: 1.5em;
 } 
 /* Hide default HTML checkbox */
 .switch_quatgio input {
@@ -1022,27 +1023,28 @@ input:checked ~ .slider_quatgio {
 .led1{
     background-color: #79a6e1;
     position: absolute;
-    top: 18rem;
+    top: 250%;
+    left: 10%;
     width: 9rem;
     height: 4rem;
     border-radius: 10px;
 }
 .content_led1{
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 5%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 /*On-Off*/
 .switch_led1 {
-    --circle-dim: 1.4em;
+    --circle-dim: 1em;
     font-size: 17px;
     position: absolute;
-    right: 16px;
-    bottom: 23px;
-    width: 3.5em;
-    height: 2em;
+    right: 4%;
+    bottom: 1.2rem;
+    width: 3.1em;
+    height: 1.5em;
 } 
 /* Hide default HTML checkbox */
 .switch_led1 input {
@@ -1105,28 +1107,28 @@ input:checked ~ .slider_led1 {
 .led2{
     background-color: #79a6e1;
     position: absolute;
-    top: 18rem;
-    left: 13rem;
+    top: 250%;
+    left: 170%;
     width: 9rem;
     height: 4rem;
     border-radius: 10px;
 }
 .content_led2{
     position: absolute;
-    top: 33%;
+    top: 35%;
     left: 5%;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 /*On-Off*/
 .switch_led2 {
-    --circle-dim: 1.4em;
+    --circle-dim: 1em;
     font-size: 17px;
     position: absolute;
-    right: 16px;
-    bottom: 23px;
-    width: 3.5em;
-    height: 2em;
+    right: 4%;
+    bottom: 1.2rem;
+    width: 3.1em;
+    height: 1.5em;
 } 
 /* Hide default HTML checkbox */
 .switch_led2 input {
@@ -1191,7 +1193,7 @@ input:checked ~ .slider_led2 {
     color: white;
     padding-left: 10px;
     padding-right: 50px;
-    font-size: 17px;
+    font-size: 0.8rem;
     border-radius: 0.9em;
     border: none;
     display: flex;
@@ -1199,8 +1201,8 @@ input:checked ~ .slider_led2 {
     overflow: hidden;
     position: absolute;
     top: 550px;
-    left: 1090px;
-    height: 2.8em;
+    left: 150%;
+    height: 2em;
 }
 .button_video_content{
     font-size: 18px;

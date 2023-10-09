@@ -1191,22 +1191,21 @@ input:checked ~ .slider_led2 {
 .button_video {
     background: #ff0000;
     color: white;
-    padding-left: 10px;
-    padding-right: 50px;
-    font-size: 0.8rem;
+    padding-right: 20%;
+    font-size: 0.6rem;
     border-radius: 0.9em;
     border: none;
     display: flex;
     align-items: center;
     overflow: hidden;
     position: absolute;
-    top: 550px;
-    left: 150%;
+    top: 470%;
+    left: 210%;
     height: 2em;
 }
 .button_video_content{
-    font-size: 18px;
-    width: 110px;
+    font-size: 0.7rem;
+    width: 5rem;
 }
 .button_video .icon {
     background: white;
@@ -1215,8 +1214,8 @@ input:checked ~ .slider_led2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
+    height: 1.4em;
+    width: 1.4em;
     border-radius: 0.7em;
     right: 0.3em;
     transition: all 0.3s;

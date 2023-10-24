@@ -243,131 +243,7 @@ input:checked ~ .slider-card_maybom {
 input:checked ~ .slider_maybom {
     background-color: #9ed99c;
 }
-/*.switch_maybom {
-    display: block;
-    background-color: black;
-    width: 40px;
-    height: 50px;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 1px 2px black, inset 0 2px 2px -2px white, inset 0 0 2px 15px #47434c, inset 0 0 2px 22px black;
-    border-radius: 5px;
-    padding: 10px;
-    perspective: 700px;
-    position: absolute;
-    top: 5;
-    left: 125;
-}  
-.switch_maybom input {
-    display: none;
-}  
-.switch_maybom input:checked + .button_maybom {
-    transform: translateZ(20px) rotateX(25deg);
-    box-shadow: 0 -10px 20px #ff1818;
-}  
-.switch_maybom input:checked_maybom + .button_maybom .light_maybom {
-    animation: flicker 0.2s infinite 0.3s;
-}  
-.switch_maybom input:checked + .button_maybom .shine_maybom {
-    opacity: 1;
-}  
-.switch_maybom input:checked + .button_maybom .shadow_maybom {
-    opacity: 0;
-}  
-.switch_maybom .button_maybom {
-    display: block;
-    transition: all 0.3s cubic-bezier(1, 0, 1, 1);
-    transform-origin: center center -20px;
-    transform: translateZ(20px) rotateX(-25deg);
-    transform-style: preserve-3d;
-    background-color: #9b0621;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-    background: linear-gradient(#980000 0%, #6f0000 30%, #6f0000 70%, #980000 100%);
-    background-repeat: no-repeat;
-}  
-.switch_maybom .button_maybom::before {
-    content: "";
-    background: linear-gradient(rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.3) 30%, #650000 75%, #320000) 50% 50%/97% 97%, #b10000;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 30px;
-    transform-origin: top;
-    transform: rotateX(-90deg);
-    position: absolute;
-    top: 0;
-}  
-.switch_maybom .button_maybom::after {
-    content: "";
-    background-image: linear-gradient(#650000, #320000);
-    width: 100%;
-    height: 30px;
-    transform-origin: top;
-    transform: translateY(50px) rotateX(-90deg);
-    position: absolute;
-    bottom: 20;
-}  
-.switch_maybom .light_maybom {
-    opacity: 0;
-    animation: light-off 1s;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(#ffc97e, #ff1818 40%, transparent 70%);
-}  
-.switch_maybom .dots_maybom {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(transparent 30%, rgba(101, 0, 0, 0.7) 70%);
-    background-size: 10px 10px;
-}  
-.switch_maybom .characters_maybom {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(white, white) 50% 20%/5% 20%, radial-gradient(circle, transparent 50%, white 52%, white 70%, transparent 72%) 50% 80%/33% 25%;
-    background-repeat: no-repeat;
-}  
-.switch_maybom .shine_maybom {
-    transition: all 0.3s cubic-bezier(1, 0, 1, 1);
-    opacity: 0.3;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(white, transparent 3%) 50% 50%/97% 97%, linear-gradient(rgba(255, 255, 255, 0.5), transparent 50%, transparent 80%, rgba(255, 255, 255, 0.5)) 50% 50%/97% 97%;
-    background-repeat: no-repeat;
-}  
-.switch_maybom .shadow_maybom {
-    transition: all 0.3s cubic-bezier(1, 0, 1, 1);
-    opacity: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(transparent 70%, rgba(0, 0, 0, 0.8));
-    background-repeat: no-repeat;
-}  
-@keyframes flicker {
-    0% {
-      opacity: 1;
-    }
-  
-    80% {
-      opacity: 0.8;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-}
-@keyframes light-off {
-    0% {
-      opacity: 1;
-    }
-  
-    80% {
-      opacity: 0;
-    }
-}*/
+
 /*Thuộc tính Quạt gió*/
 .quatgio{
     background-color: #79a6e1;
@@ -691,6 +567,90 @@ input:checked ~ .slider_led2 {
     width: 8rem;
     height: 7.5rem;
 }
+
+/*Tài khoản*/
+.login-back {
+    width: 300px;
+    background: #f1f7fe;
+    overflow: hidden;
+    border-radius: 16px;
+    color: #010101;
+    position: absolute;
+    top: 150%;
+    left: 450%;
+} 
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px 24px;
+    gap: 16px;
+    text-align: center;
+} 
+/*login text*/
+.title-login {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.subtitle-login {
+    font-size: 1rem;
+    color: #666;
+} 
+/*Inputs box*/
+.login-container {
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 1rem 0 .5rem;
+    width: 100%;
+}
+.input-login {
+    background: none;
+    border: 0;
+    outline: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-size: .9rem;
+    padding: 8px 15px;
+}
+.login-section {
+    padding: 16px;
+    font-size: .85rem;
+    background-color: #e0ecfb;
+    box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+.login-section a {
+    font-weight: bold;
+    color: #00BF63;
+    transition: color .3s ease;
+}
+.login-section a:hover {
+    color: #00BF63;
+    text-decoration: underline;
+}
+#eye i {
+    position: absolute;
+    top: 63%;
+    right: 10%;
+    color: #969696;
+}
+/*Button*/
+.login button {
+    background-color: #00BF63;
+    color: #fff;
+    border: 0;
+    border-radius: 24px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+.login button:hover {
+    background-color: #00ab58;
+}
+
 /*Thuộc tính footer */
 /* Định dạng phần footer */
 footer {
@@ -732,565 +692,4 @@ footer {
 }
 .more a:hover {
     color: #007bff; /* Màu chữ khi hover chuột */
-}
-/* CSS cho điện thoại di động */
-@media screen and (max-width: 600px) {
-/* Đặt các thuộc tính CSS dành cho điện thoại di động ở đây */
-table.header{
-    height: 10%;
-}
-table.header td {
-    width: 100%;
-    font-size: 12px;
-}
-table.header .logo {
-    max-width: 100%;
-    max-height: 10vh;
-}
-.menu {
-    width: 20%;
-    height: 95%;
-    position: absolute;
-    top: 10%;
-    font-size: 3vw;
-}
-.mucluc{
-    font-size: 0.5rem;
-}
-.value{
-    font-size: 0.5rem;
-}
-.value.active {
-    background-color: #ffffff;
-    border: none;
-    padding: 1rem;
-    color: #00BF63;
-    text-align: center;
-    font-weight: bold;
-    font-family: Arial;
-    font-size: 0.5rem;
-    border-radius: 5px;
-}
-.value:hover {
-    background-color: #ffffff;
-    color: #00BF63;
-    border-radius: 5px;
-}
-.background {
-    width: 80%;
-    height: 83%;
-    position: absolute;
-    top: 10%;
-    left: 20%;
-}
-
-/*Thuộc tính Nhiệt độ*/
-.data_nhietdo{
-    background-color: #e17979;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-}
-.content_nhietdo{
-    padding-left: 0.5rem;
-    padding-top: 0.5rem;
-    font-size: 0.9rem;
-    text-align: left;
-}
-.value_nhietdo{
-    color:#03030a;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    text-align: left;
-}
-/*Thuộc tính Độ ẩm*/
-.data_doam{
-    background-color: #79a6e1;
-    position: absolute;
-    top: 90%;
-    left: 10%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_doam{
-    padding-left: 0.5rem;
-    padding-top: 0.5rem;
-    font-size: 0.9rem;
-    text-align: left;
-}
-.value_doam{
-    color:#03030a;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    text-align: left;
-}
-/*Thuộc tính Độ ẩm đất*/
-.data_doamdat{
-    background-color: #8f764e;
-    position: absolute;
-    left: 170%;
-    top: 10%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_doamdat{
-    padding-left: 0.5rem;
-    padding-top: 0.5rem;
-    font-size: 0.9rem;
-    text-align: left;
-}
-.value_doamdat{
-    color:#03030a;
-    font-size: 1.8rem;
-    line-height: 2rem;
-    text-align: left;
-}
-/*Thuộc tính bật tắt Máy bơm*/
-.maybom{
-    background-color: #79a6e1;
-    position: absolute;
-    top: 170%;
-    left: 10%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_maybom{
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    font-size: 1rem;
-    font-weight: bold;
-}
-/*On-Off*/
-.switch_maybom {
-    --circle-dim: 1em;
-    font-size: 17px;
-    position: absolute;
-    right: 4%;
-    bottom: 1.2rem;
-    width: 3.1em;
-    height: 1.5em;
-}
-/* Hide default HTML checkbox */
-.switch_maybom input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-} 
-/* The slider */
-.slider_maybom {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f5aeae;
-    transition: .4s;
-    border-radius: 30px;
-} 
-.slider-card_maybom {
-    position: absolute;
-    content: "";
-    height: var(--circle-dim);
-    width: var(--circle-dim);
-    border-radius: 20px;
-    left: 0.3em;
-    bottom: 0.3em;
-    transition: .4s;
-    pointer-events: none;
-  }
-  
-.slider-card-face_maybom {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    perspective: 1000px;
-    border-radius: 50%;
-    transition: .4s transform;
-} 
-.slider-card-front_maybom {
-    background-color: #DC3535;
-}  
-.slider-card-back_maybom {
-    background-color: #379237;
-    transform: rotateY(180deg);
-} 
-input:checked ~ .slider-card_maybom .slider-card-back_maybom {
-    transform: rotateY(0);
-}  
-input:checked ~ .slider-card_maybom .slider-card-front_maybom {
-    transform: rotateY(-180deg);
-}
-input:checked ~ .slider-card_maybom {
-    transform: translateX(1.5em);
-} 
-input:checked ~ .slider_maybom {
-    background-color: #9ed99c;
-}
-
-/*Thuộc tính Quạt gió*/
-.quatgio{
-    background-color: #79a6e1;
-    position: absolute;
-    top: 170%;
-    left: 170%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_quatgio{
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    font-size: 1rem;
-    font-weight: bold;
-}
-/*On-Off*/
-.switch_quatgio {
-    --circle-dim: 1em;
-    font-size: 17px;
-    position: absolute;
-    right: 4%;
-    bottom: 1.2rem;
-    width: 3.1em;
-    height: 1.5em;
-} 
-/* Hide default HTML checkbox */
-.switch_quatgio input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-} 
-/* The slider */
-.slider_quatgio {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f5aeae;
-    transition: .4s;
-    border-radius: 30px;
-} 
-.slider-card_quatgio {
-    position: absolute;
-    content: "";
-    height: var(--circle-dim);
-    width: var(--circle-dim);
-    border-radius: 20px;
-    left: 0.3em;
-    bottom: 0.3em;
-    transition: .4s;
-    pointer-events: none;
-  }
-  
-.slider-card-face_quatgio {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    perspective: 1000px;
-    border-radius: 50%;
-    transition: .4s transform;
-} 
-.slider-card-front_quatgio {
-    background-color: #DC3535;
-}  
-.slider-card-back_quatgio {
-    background-color: #379237;
-    transform: rotateY(180deg);
-} 
-input:checked ~ .slider-card_quatgio .slider-card-back_quatgio {
-    transform: rotateY(0);
-}  
-input:checked ~ .slider-card_quatgio .slider-card-front_quatgio {
-    transform: rotateY(-180deg);
-}
-input:checked ~ .slider-card_quatgio {
-    transform: translateX(1.5em);
-} 
-input:checked ~ .slider_quatgio {
-    background-color: #9ed99c;
-}
-/*Thuộc tính LED 1*/
-.led1{
-    background-color: #79a6e1;
-    position: absolute;
-    top: 250%;
-    left: 10%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_led1{
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    font-size: 1rem;
-    font-weight: bold;
-}
-/*On-Off*/
-.switch_led1 {
-    --circle-dim: 1em;
-    font-size: 17px;
-    position: absolute;
-    right: 4%;
-    bottom: 1.2rem;
-    width: 3.1em;
-    height: 1.5em;
-} 
-/* Hide default HTML checkbox */
-.switch_led1 input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-} 
-/* The slider */
-.slider_led1 {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f5aeae;
-    transition: .4s;
-    border-radius: 30px;
-} 
-.slider-card_led1 {
-    position: absolute;
-    content: "";
-    height: var(--circle-dim);
-    width: var(--circle-dim);
-    border-radius: 20px;
-    left: 0.3em;
-    bottom: 0.3em;
-    transition: .4s;
-    pointer-events: none;
-  }
-  
-.slider-card-face_led1 {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    perspective: 1000px;
-    border-radius: 50%;
-    transition: .4s transform;
-} 
-.slider-card-front_led1 {
-    background-color: #DC3535;
-}  
-.slider-card-back_led1 {
-    background-color: #379237;
-    transform: rotateY(180deg);
-} 
-input:checked ~ .slider-card_led1 .slider-card-back_led1 {
-    transform: rotateY(0);
-}  
-input:checked ~ .slider-card_led1 .slider-card-front_led1 {
-    transform: rotateY(-180deg);
-}
-input:checked ~ .slider-card_led1 {
-    transform: translateX(1.5em);
-} 
-input:checked ~ .slider_led1 {
-    background-color: #9ed99c;
-}
-/*Thuộc tính LED 2*/
-.led2{
-    background-color: #79a6e1;
-    position: absolute;
-    top: 250%;
-    left: 170%;
-    width: 9rem;
-    height: 4rem;
-    border-radius: 10px;
-}
-.content_led2{
-    position: absolute;
-    top: 35%;
-    left: 5%;
-    font-size: 1rem;
-    font-weight: bold;
-}
-/*On-Off*/
-.switch_led2 {
-    --circle-dim: 1em;
-    font-size: 17px;
-    position: absolute;
-    right: 4%;
-    bottom: 1.2rem;
-    width: 3.1em;
-    height: 1.5em;
-} 
-/* Hide default HTML checkbox */
-.switch_led2 input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-} 
-/* The slider */
-.slider_led2 {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f5aeae;
-    transition: .4s;
-    border-radius: 30px;
-} 
-.slider-card_led2 {
-    position: absolute;
-    content: "";
-    height: var(--circle-dim);
-    width: var(--circle-dim);
-    border-radius: 20px;
-    left: 0.3em;
-    bottom: 0.3em;
-    transition: .4s;
-    pointer-events: none;
-  }
-  
-.slider-card-face_led2 {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    perspective: 1000px;
-    border-radius: 50%;
-    transition: .4s transform;
-} 
-.slider-card-front_led2 {
-    background-color: #DC3535;
-}  
-.slider-card-back_led2 {
-    background-color: #379237;
-    transform: rotateY(180deg);
-} 
-input:checked ~ .slider-card_led2 .slider-card-back_led2 {
-    transform: rotateY(0);
-}  
-input:checked ~ .slider-card_led2 .slider-card-front_led2 {
-    transform: rotateY(-180deg);
-}
-input:checked ~ .slider-card_led2 {
-    transform: translateX(1.5em);
-} 
-input:checked ~ .slider_led2 {
-    background-color: #9ed99c;
-}
-/*Button xem video trực tiếp*/
-.button_video {
-    background: #ff0000;
-    color: white;
-    padding-right: 20%;
-    font-size: 0.6rem;
-    border-radius: 0.5em;
-    border: none;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    position: absolute;
-    top: 490%;
-    left: 210%;
-    height: 2em;
-}
-.button_video_content{
-    font-size: 0.7rem;
-    width: 5rem;
-}
-.button_video .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 0.5em;
-    right: 0.3em;
-    transition: all 0.3s;
-    text-decoration: none;
-} 
-.fa-video{
-    background: #ffffff;
-    color: #000000;
-}
-.button_video:hover .icon {
-    width: calc(100% - 0.6em);
-}  
-.button_video .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: #ff0000;
-}  
-.button_video:hover .icon svg {
-    transform: translateX(0.1em);
-}  
-.button_video:active .icon {
-    transform: scale(0.95);
-}
-.table-container {
-    width: 17rem;
-}
-.device-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-.device-table td {
-    font-size: 0.5rem;
-    padding: 0.6rem;
-}
-.content {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.anh{
-    width: 4rem;
-    height: 3.75rem;
-}
-footer {
-    background-color: #d9d9d9;
-    font-family: Arial;
-    width: 100%;
-    height: 20%;
-    border-top: 1px solid #000;
-    position: absolute;
-    top: 95%;
-}
-.infor {
-    flex: 1;
-    padding: 0 6px;
-    width: 40%;
-    position: absolute;
-    top: 5%;
-    font-size: 10px;
-}
-.sinhvien {
-    flex: 1;
-    width: 20%;
-    padding: 0 20px;
-    position: absolute;
-    left: 38%;
-    top: 5%;
-    font-size: 10px;
-}
-.more {
-    flex: 1;
-    padding: 0 15px;
-    position: absolute;
-    right: 0%;
-    top: 5%;
-    font-size: 10px;
-}
 }

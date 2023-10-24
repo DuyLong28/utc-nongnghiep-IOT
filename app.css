@@ -22,7 +22,7 @@
         font-size: 10px;
         color: #000;
         position: relative;
-        top: 12%;
+        top: 10%;
         right: 14%;
     }
     .avt-user {
@@ -30,7 +30,7 @@
         border-radius: 100%;
         position: relative;
         left: 47%;
-        bottom: 50%;
+        bottom: 82%;
     }
     .user-box:hover{
         background-color: #979797;

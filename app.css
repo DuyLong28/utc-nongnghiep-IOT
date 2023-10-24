@@ -20,6 +20,7 @@
     }
     .name {
         font-size: 10px;
+        color: #000;
         position: relative;
         top: 10%;
         right: 14%;
@@ -29,7 +30,7 @@
         border-radius: 100%;
         position: relative;
         left: 47%;
-        bottom: 86%;
+        bottom: 70%;
     }
     .user-box:hover{
         background-color: #979797;

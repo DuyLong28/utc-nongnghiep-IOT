@@ -11,7 +11,6 @@ table.header {
     width: 100%;
     height: 12vh; /* Sử dụng đơn vị tương đối */
     border-collapse: collapse;
-    table-layout: fixed;
 }
 
 /* Động cơ chia đều hai bên */
@@ -19,7 +18,6 @@ table.header td {
     text-align: center;
     vertical-align: middle;
     border: 1px solid #000;
-    width: 50%;
     font-size: 22px;
 }
 
@@ -31,6 +29,32 @@ table.header .logo {
     margin: 0 auto;
     width: auto; /* Thay đổi kích thước tùy theo nội dung */
     height: auto; /* Thay đổi kích thước tùy theo nội dung */
+}
+.user-box {
+    border-radius: 20px;
+    border: none;
+    width: 8rem;
+    height: 2.1rem;
+    background-color:#b5b5b5;
+    position: relative;
+}
+.name {
+    font-size: 1rem;
+    position: relative;
+    top: 24%;
+    right: 14%;
+}
+.avt-user {
+    width: 30px;
+    border-radius: 100%;
+    position: relative;
+    left: 40%;
+    bottom: 56%;
+    /*left: 37%;
+    top: 5%;*/
+}
+.user-box:hover{
+    background-color: #979797;
 }
 
 /* Thuộc tính menu */
@@ -604,7 +628,8 @@ input:checked ~ .slider_led2 {
     margin: 1rem 0 .5rem;
     width: 100%;
 }
-.input-login {
+.input-login-user,
+.input-login-password {
     background: none;
     border: 0;
     outline: 0;
@@ -636,7 +661,7 @@ input:checked ~ .slider_led2 {
     color: #969696;
 }
 /*Button*/
-.login button {
+.button-login {
     background-color: #00BF63;
     color: #fff;
     border: 0;
@@ -647,7 +672,7 @@ input:checked ~ .slider_led2 {
     cursor: pointer;
     transition: background-color .3s ease;
 }
-.login button:hover {
+.button-login:hover {
     background-color: #00ab58;
 }
 
@@ -693,3 +718,4 @@ footer {
 .more a:hover {
     color: #007bff; /* Màu chữ khi hover chuột */
 }
+

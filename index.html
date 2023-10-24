@@ -17,6 +17,12 @@
             <tbody>
                 <td><img class="logo" src="Picture/header.png"></td>
                 <td style="font-weight: bold;" class="title">HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH BẰNG IOT</td>
+                <td class="user">
+                    <button class="user-box" id="btnUser" onclick="showContent('dangnhap', event)">
+                        <div id="userName" class="name"></div>
+                        <img class="avt-user" src="Picture/avt.jpg"></i>
+                    </button>
+                </td>
             </tbody>
         </table>
     </div>
@@ -205,13 +211,13 @@
                     <span class="title-login">Xin chào,</span>
                     <span class="subtitle-login">hãy đăng nhập bằng tài khoản được cung cấp.</span>
                     <div class="login-container">
-                        <input type="text" class="input-login" placeholder="Tài khoản">
-                        <input type="password" class="input-login" placeholder="Mật khẩu">
+                        <input id="username" type="text" class="input-login-user" placeholder="Tài khoản">
+                        <input id="password" type="password" class="input-login-password" placeholder="Mật khẩu">
                         <div id="eye">
                             <i class="fas fa-eye"></i>
                         </div>
                     </div>
-                    <button>Đăng nhập</button>
+                    <button id="btnLogin" class="button-login">Đăng nhập</button>
                 </form>
             </div>
         </div>

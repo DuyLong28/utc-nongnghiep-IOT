@@ -5,16 +5,18 @@
     <meta charset="utf-8" >
     <link rel="icon" href="data:">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
     <script defer src="app.js"></script>
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> f 
 </head>
 <body>
     <div class="container">
         <table class="header">
             <tbody>
                 <td><img class="logo" src="Picture/header.png"></td>
-                <td style="font-weight: bold; font-family: Arial;">HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH BẰNG IOT</td>
+                <td style="font-weight: bold;" class="title">HỆ THỐNG GIÁM SÁT NÔNG NGHIỆP THÔNG MINH BẰNG IOT</td>
             </tbody>
         </table>
     </div>
@@ -25,6 +27,7 @@
             <button class="value" onclick="showContent('phantich', event)">PHÂN TÍCH</button>
             <button class="value" onclick="showContent('dulieu', event)">DỮ LIỆU</button>
             <button class="value" onclick="showContent('thietbi', event)">THIẾT BỊ</button>
+            <button class="value" onclick="showContent('taikhoan', event)">TÀI KHOẢN</button>
     </div>
     <div class="background">
         <div id="gioithieu" class="content" style="display: none;">
@@ -62,16 +65,6 @@
             </div>
             <div class="maybom" id="maybom">
                 <a class="content_maybom" style="font-family: Arial;">Máy bơm</a>
-                <!-- <label class="switch_maybom">
-                    <input type="checkbox" checked="checked_maybom">
-                    <div class="button_maybom">
-                      <div class="light_maybom"></div>
-                      <div class="dots_maybom"></div>
-                      <div class="characters_maybom"></div>
-                      <div class="shine_maybom"></div>
-                      <div class="shadow_maybom"></div>
-                    </div>
-                </label> -->
                 <label class="switch_maybom">
                     <input type="checkbox">
                     <div class="slider_maybom"></div>
@@ -114,18 +107,18 @@
                     </div>
                 </label>
             </div>
-            <button class="button_video">
-                <div class="button_video_content" style="font-family: Arial;">Xem trực tiếp</div>
-                <a class="icon"  href="http://192.168.1.224/" target="_blank">
-                    <i class="fas fa-video"></i>
-                </a>
-            </button>
+                <button class="button_video">
+                    <div class="button_video_content" style="font-family: Arial;">Xem trực tiếp</div>
+                    <a class="icon"  href="http://192.168.1.224/" target="_blank">
+                        <i class="fas fa-video"></i>
+                    </a>
+                </button>
         </div>
         <div id="phantich" class="content" style="display: none;">
             <!-- Nội dung giám sát -->
             <p>Đây là nội dung phân tích.</p>
-        </div>
-        <div id="dulieu" class="content" style="display: none;">
+            </div>
+            <div id="dulieu" class="content" style="display: none;">
             <!-- Nội dung giám sát -->
             <p>Đây là nội dung dữ liệu.</p>
         </div>
@@ -204,6 +197,23 @@
                     </tbody>
                 </table>
             </div>            
+        </div>
+        <div id="taikhoan" class="content" style="display: none;">
+            <!-- Nội dung Tài khoản -->
+            <div class="login-back">
+                <form class="login">
+                    <span class="title-login">Xin chào,</span>
+                    <span class="subtitle-login">hãy đăng nhập bằng tài khoản được cung cấp.</span>
+                    <div class="login-container">
+                        <input type="text" class="input-login" placeholder="Tài khoản">
+                        <input type="password" class="input-login" placeholder="Mật khẩu">
+                        <div id="eye">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <button>Đăng nhập</button>
+                </form>
+            </div>
         </div>
     </div>
     <footer>

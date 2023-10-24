@@ -60,5 +60,60 @@ $(document).ready(function(){
         }
     });
 });
+//Bấm nút đăng nhập
+document.getElementById("btnUser").addEventListener("click", function() {
+    // Hiển thị phần tài khoản
+    const taikhoan = document.getElementById("taikhoan");
+    taikhoan.style.display = "block";
+});
 
+// Trạng thái đăng nhập (ví dụ: đang đăng nhập hoặc không đăng nhập)
+let isAuthenticated = false;
+let authenticatedUserName = "";
 
+// Lấy phần tử "userName"
+const userNameElement = document.getElementById("userName");
+
+// Hàm cập nhật nội dung của phần tử "userName" dựa vào trạng thái đăng nhập
+function updateUserNameDisplay() {
+  if (isAuthenticated) {
+    // Đã đăng nhập: Hiển thị tên người dùng
+    userNameElement.textContent = authenticatedUserName;
+  } else {
+    // Chưa đăng nhập: Hiển thị chữ "Đăng nhập"
+    userNameElement.textContent = "Đăng nhập";
+  }
+}
+
+fetch('accounts.json')
+  .then(response => response.json())
+  .then(data => {
+    const users = data.users;
+    const inputUsername = document.querySelector("#username");
+    const inputPassword = document.querySelector("#password");
+    const btnLogin = document.querySelector("#btnLogin");
+
+    btnLogin.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (inputUsername.value === "" || inputPassword.value === "") {
+        alert("Vui lòng không để trống");
+      } else {
+        const user = users.find(u => u.username === inputUsername.value && u.password === inputPassword.value);
+        if (user) {
+          alert("Đăng Nhập Thành Công");
+          // Cập nhật trạng thái đăng nhập và tên người dùng
+          isAuthenticated = true;
+          authenticatedUserName = user.username;
+          // Cập nhật nội dung của phần tử "userName"
+          updateUserNameDisplay();
+          window.location.href = "index.html";
+        } else {
+          alert("Đăng Nhập Thất Bại");
+        }
+      }
+    });
+  })
+  .catch(error => console.error(error));
+
+// Gọi hàm cập nhật trạng thái ban đầu
+updateUserNameDisplay();

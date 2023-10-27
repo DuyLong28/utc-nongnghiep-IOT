@@ -60,6 +60,7 @@ $(document).ready(function(){
         }
     });
 });
+
 //Bấm nút đăng nhập
 document.getElementById("btnUser").addEventListener("click", function() {
     // Hiển thị phần tài khoản
@@ -85,20 +86,25 @@ function updateUserNameDisplay() {
   }
 }
 
-fetch('accounts.json')
-  .then(response => response.json())
-  .then(data => {
-    const users = data.users;
-    const inputUsername = document.querySelector("#username");
-    const inputPassword = document.querySelector("#password");
-    const btnLogin = document.querySelector("#btnLogin");
+// Lấy phần tử input và button đăng nhập
+const inputUsername = document.querySelector(".input-login-user");
+const inputPassword = document.querySelector(".input-login-password");
+const btnLogin = document.querySelector(".button-login");
 
-    btnLogin.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (inputUsername.value === "" || inputPassword.value === "") {
-        alert("Vui lòng không để trống");
-      } else {
-        const user = users.find(u => u.username === inputUsername.value && u.password === inputPassword.value);
+// Hàm kiểm tra đăng nhập
+function login() {
+  if (inputUsername.value === "" || inputPassword.value === "") {
+    alert("Vui lòng không để trống");
+  } else {
+    const username = inputUsername.value;
+    const password = inputPassword.value;
+
+    // Sử dụng Fetch API để tải tệp JSON chứa thông tin tài khoản
+    fetch('accounts.json')
+      .then(response => response.json())
+      .then(data => {
+        const users = data.users;
+        const user = users.find(u => u.username === username && u.password === password);
         if (user) {
           alert("Đăng Nhập Thành Công");
           // Cập nhật trạng thái đăng nhập và tên người dùng
@@ -110,10 +116,21 @@ fetch('accounts.json')
         } else {
           alert("Đăng Nhập Thất Bại");
         }
-      }
-    });
-  })
-  .catch(error => console.error(error));
-
+      })
+      .catch(error => console.error(error));
+  }
+}
 // Gọi hàm cập nhật trạng thái ban đầu
 updateUserNameDisplay();
+
+btnLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  login();
+});
+
+// Gọi hàm kiểm tra đăng nhập khi nhấn Enter trên trường mật khẩu
+inputPassword.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    login();
+  }
+});

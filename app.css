@@ -27,10 +27,8 @@
     }
     .avt-user {
         width: 15px;
-        border-radius: 100%;
-        position: relative;
         left: 47%;
-        bottom: 150%;
+        bottom: 83%;
     }
     .user-box:hover{
         background-color: #979797;

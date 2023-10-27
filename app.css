@@ -30,7 +30,7 @@
         border-radius: 100%;
         position: relative;
         left: 47%;
-        bottom: 83%;
+        bottom: 150%;
     }
     .user-box:hover{
         background-color: #979797;
@@ -481,7 +481,7 @@
         color: white;
         padding-right: 20%;
         font-size: 0.6rem;
-        border-radius: 0.5em;
+        border-radius: 0.7em;
         border: none;
         display: flex;
         align-items: center;

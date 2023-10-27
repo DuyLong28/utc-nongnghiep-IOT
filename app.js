@@ -87,12 +87,17 @@ function updateUserNameDisplay() {
 }
 
 // Lấy phần tử input và button đăng nhập
+// Lấy phần tử input và button đăng nhập
 const inputUsername = document.querySelector(".input-login-user");
 const inputPassword = document.querySelector(".input-login-password");
 const btnLogin = document.querySelector(".button-login");
 
 // Hàm kiểm tra đăng nhập
 function login() {
+  if (isAuthenticated) {
+    alert("Bạn đã đăng nhập.");
+    return;
+  }
   if (inputUsername.value === "" || inputPassword.value === "") {
     alert("Vui lòng không để trống");
   } else {
@@ -107,12 +112,22 @@ function login() {
         const user = users.find(u => u.username === username && u.password === password);
         if (user) {
           alert("Đăng Nhập Thành Công");
+          // Gỡ bỏ thuộc tính disabled sau khi đăng nhập thành công
+          const lockMaybom = document.getElementById("lock-maybom");
+          lockMaybom.removeAttribute("disabled");
+          const lockQuatgio = document.getElementById("lock-quatgio");
+          lockQuatgio.removeAttribute("disabled");
+          const lockLed1 = document.getElementById("lock-led1");
+          lockLed1.removeAttribute("disabled");
+          const lockLed2 = document.getElementById("lock-led2");
+          lockLed2.removeAttribute("disabled");
+
           // Cập nhật trạng thái đăng nhập và tên người dùng
           isAuthenticated = true;
           authenticatedUserName = user.username;
+
           // Cập nhật nội dung của phần tử "userName"
           updateUserNameDisplay();
-          window.location.href = "index.html";
         } else {
           alert("Đăng Nhập Thất Bại");
         }
@@ -123,6 +138,7 @@ function login() {
 // Gọi hàm cập nhật trạng thái ban đầu
 updateUserNameDisplay();
 
+//Thao tác khi bấm vào nút đăng nhập
 btnLogin.addEventListener("click", (e) => {
   e.preventDefault();
   login();

@@ -87,7 +87,6 @@ function updateUserNameDisplay() {
 }
 
 // Lấy phần tử input và button đăng nhập
-// Lấy phần tử input và button đăng nhập
 const inputUsername = document.querySelector(".input-login-user");
 const inputPassword = document.querySelector(".input-login-password");
 const btnLogin = document.querySelector(".button-login");
@@ -128,6 +127,14 @@ function login() {
 
           // Cập nhật nội dung của phần tử "userName"
           updateUserNameDisplay();
+
+          // Ẩn form đăng nhập
+          const loginForm = document.querySelector(".login");
+          loginForm.style.display = "none";
+
+          // Hiển thị phần tài khoản và nút đăng xuất
+          const inforTaikhoan = document.getElementById("infor-taikhoan");
+          inforTaikhoan.style.display = "block";
         } else {
           alert("Đăng Nhập Thất Bại");
         }
@@ -142,6 +149,35 @@ updateUserNameDisplay();
 btnLogin.addEventListener("click", (e) => {
   e.preventDefault();
   login();
+});
+
+//Lấy phần tử nút đăng xuất
+const btnLogout = document.getElementById("btnLogout");
+
+// Sự kiện click cho nút đăng xuất
+btnLogout.addEventListener("click", () => {
+  isAuthenticated = false;
+  authenticatedUserName = "";
+  // Cập nhật nội dung của phần tử "userName" sau khi đăng xuất
+  updateUserNameDisplay();
+
+  // Ẩn phần tài khoản và nút đăng xuất
+  const inforTaikhoan = document.getElementById("infor-taikhoan");
+  inforTaikhoan.style.display = "none";
+
+  // Hiển thị lại form đăng nhập
+  const loginForm = document.querySelector(".login");
+  loginForm.style.display = "block";
+  
+  // Đặt lại thuộc tính disabled sau khi đăng xuất thành công
+  const lockMaybom = document.getElementById("lock-maybom");
+  lockMaybom.disabled = true;
+  const lockQuatgio = document.getElementById("lock-quatgio");
+  lockQuatgio.disabled = true;
+  const lockLed1 = document.getElementById("lock-led1");
+  lockLed1.disabled = true;
+  const lockLed2 = document.getElementById("lock-led2");
+  lockLed2.disabled = true;
 });
 
 // Gọi hàm kiểm tra đăng nhập khi nhấn Enter trên trường mật khẩu

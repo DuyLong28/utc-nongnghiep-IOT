@@ -587,6 +587,12 @@ input:checked ~ .slider_led2 {
     bottom: 65%;
     padding: 10px;
 }
+.fa-calendar {
+    border-radius: 100%;
+    position: relative;
+    top: 37%;
+    right: 0.3%;
+}
 #searchThoiGian,#searchNhietDo,#searchDoAm,#searchDoAmDat {
     width: 200px;
     height: 30px;
@@ -613,7 +619,7 @@ input:checked ~ .slider_led2 {
     height: 25px;
     position: relative;
     top: 68%;
-    left: 25%;
+    left: 23.4%;
     background-color: #00BF63;
 }
 #searchButton:hover {

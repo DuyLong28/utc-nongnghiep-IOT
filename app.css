@@ -18,12 +18,10 @@
         font-size: 10px;
         color: #000;
         top: 12%;
-        right: 14%;
+        right: 1%;
     }
     .avt-user {
-        width: 15px;
-        left: 47%;
-        bottom: 83%;
+        display: none;
     }
     .user-box:hover{
         background-color: #979797;

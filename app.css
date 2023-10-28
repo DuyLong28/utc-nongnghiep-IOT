@@ -303,7 +303,20 @@
         top: 60%;
         right: 14%;
     }
-
+    #infor-taikhoan {
+        position: relative;
+        top: 5%;
+        left: 5%;
+        width: 21rem;
+        font-size: 0.7rem;
+    }
+    .button-logout {
+        width: 75px;
+        padding: 5px 8px;
+        font-size: 0.7rem;
+        top: 2100%;
+        left: 75%;
+    }
     /*Footer*/
     footer {
         height: 20%;

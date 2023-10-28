@@ -186,3 +186,121 @@ inputPassword.addEventListener("keyup", (e) => {
     login();
   }
 });
+
+//Dữ liệu
+    // Biến toàn cục để lưu trữ giá trị nhiệt độ và độ ẩm
+    let nhietDo = 28; // Giả sử nhiệt độ ban đầu là 28°C
+    let doAm = 60;   // Giả sử độ ẩm ban đầu là 60%
+  
+    // Hàm lấy thời gian thực
+    function getCurrentTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = now.getMonth() + 1; // Tháng bắt đầu từ 0, nên cộng thêm 1
+      const date = now.getDate();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+
+      return `${year}-${month}-${date} ${hours}:${minutes}:${seconds}`;
+    }
+
+    // Hàm thêm dữ liệu vào bảng với thời gian thực
+    function addDataToTable(data) {
+      const { doAmDat } = data;
+      const tbody = document.querySelector('.data-table tbody');
+      const rowCount = tbody.rows.length;
+      const row = tbody.insertRow(1);
+      const cellStt = row.insertCell(0);
+      const cellThoiGian = row.insertCell(1);
+      const cellNhietDo = row.insertCell(2);
+      const cellDoAm = row.insertCell(3);
+      const cellDoAmDat = row.insertCell(4);
+
+      // Cộng thêm 1 đơn vị cho nhiệt độ và độ ẩm mỗi lần cập nhật
+      nhietDo += 1;
+      doAm += 1;
+
+      cellStt.innerHTML = rowCount;
+      cellThoiGian.innerHTML = getCurrentTime();
+      cellNhietDo.innerHTML = `${nhietDo}°C`;
+      cellDoAm.innerHTML = `${doAm}%`;
+      cellDoAmDat.innerHTML = `${doAmDat}%`;
+    }
+
+  // Đoạn mã này chỉ là ví dụ và cần được thay thế bằng cách lấy dữ liệu thực tế
+    function fetchDataPeriodically() {
+      // Thực hiện lấy dữ liệu từ hệ thống hoặc nguồn dữ liệu khác ở đây
+      // Ví dụ:
+      const sampleData = {
+          thoiGian: "2023-10-27 08:00",
+          doAmDat: 30
+      };
+
+      addDataToTable(sampleData);
+  }
+
+    // Cập nhật dữ liệu sau mỗi khoảng thời gian
+    setInterval(fetchDataPeriodically, 60000); // Cập nhật dữ liệu sau mỗi x giây (x000 ms)
+
+    // Tạo các trường tìm kiếm
+    const searchThoiGian = document.getElementById('searchThoiGian');
+    const searchNhietDo = document.getElementById('searchNhietDo');
+    const searchDoAm = document.getElementById('searchDoAm');
+    const searchDoAmDat = document.getElementById('searchDoAmDat');
+
+    // Lắng nghe sự kiện khi người dùng nhấn nút tìm kiếm
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', filterTable);
+
+    // Hàm bộ lọc
+    function filterTable() {
+      const filterThoiGian = searchThoiGian.value.toLowerCase();
+      const filterNhietDo = searchNhietDo.value.toLowerCase();
+      const filterDoAm = searchDoAm.value.toLowerCase();
+      const filterDoAmDat = searchDoAmDat.value.toLowerCase();
+
+      const rows = document.querySelectorAll('.data-table tbody tr');
+
+      rows.forEach(row => {
+        const thoiGian = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+        const nhietDo = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+        const doAm = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+        const doAmDat = row.querySelector('td:nth-child(5)').textContent.toLowerCase();
+
+        const thoiGianMatch = thoiGian.includes(filterThoiGian);
+        const nhietDoMatch = nhietDo.includes(filterNhietDo);
+        const doAmMatch = doAm.includes(filterDoAm);
+        const doAmDatMatch = doAmDat.includes(filterDoAmDat);
+
+      if (thoiGianMatch && nhietDoMatch && doAmMatch && doAmDatMatch) {
+        row.classList.remove('hide-row'); // Loại bỏ lớp hide-row nếu điều kiện lọc đúng
+      } else {
+        row.classList.add('hide-row'); // Thêm lớp hide-row nếu điều kiện lọc sai
+      }
+    });
+  }
+    // Lắng nghe sự kiện khi người dùng thay đổi giá trị trường tìm kiếm
+    searchThoiGian.addEventListener('input', handleSearchInput);
+    searchNhietDo.addEventListener('input', handleSearchInput);
+    searchDoAm.addEventListener('input', handleSearchInput);
+    searchDoAmDat.addEventListener('input', handleSearchInput);
+    
+    // Hàm xử lý khi giá trị trường tìm kiếm thay đổi
+    function handleSearchInput() {
+      // Kiểm tra giá trị của tất cả các trường tìm kiếm
+      const thoiGianValue = searchThoiGian.value.trim().toLowerCase();
+      const nhietDoValue = searchNhietDo.value.trim().toLowerCase();
+      const doAmValue = searchDoAm.value.trim().toLowerCase();
+      const doAmDatValue = searchDoAmDat.value.trim().toLowerCase();
+
+      // Kiểm tra xem tất cả các trường tìm kiếm có giá trị trống không
+      if (thoiGianValue === '' && nhietDoValue === '' && doAmValue === '' && doAmDatValue === '') {
+        // Nếu tất cả trống, xóa lọc và hiển thị tất cả các dòng
+        const rows = document.querySelectorAll('.data-table tbody tr');
+        rows.forEach(row => {
+          row.classList.remove('hide-row');
+        });
+      }
+    }
+

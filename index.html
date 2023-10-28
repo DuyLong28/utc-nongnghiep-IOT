@@ -10,10 +10,8 @@
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Tải thư viện Flatpickr -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
 </head>
 <body>
     <div class="container">
@@ -132,12 +130,11 @@
             <!-- Nội dung dữ liệu -->
             <div class="timkiem-back">
                 <div class="h1-timkiem" style="font-weight: bold;font-size: 15px">Bộ lọc:</div>
-                <input type="text" id="searchThoiGian" placeholder="Thời gian">
+                <input type="date" id="searchThoiGian" min="2000-01-01">
                 <input type="text" id="searchNhietDo" placeholder="Nhiệt độ">
                 <input type="text" id="searchDoAm" placeholder="Độ ẩm">
                 <input type="text" id="searchDoAmDat" placeholder="Độ ẩm đất">
                 <button id="searchButton">Tìm kiếm</button>
-                <div id="noDataMessage" style="display: none; color: red; font-weight: bold;">Không có dữ liệu phù hợp</div>
             </div>
             <div class="data-back">
                 <table class="data-table">

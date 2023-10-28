@@ -202,6 +202,54 @@
         border-radius: 0.5em;
         right: 0.3em;
     } 
+    
+    /*Dữ liệu*/
+    .timkiem-back {
+        width: 320px;
+        height: 70px;
+        top: 10%;
+        left: 10%;
+    }
+    .h1-timkiem {
+        bottom: 65%;
+        padding: 10px;
+    }
+    #searchThoiGian, #searchNhietDo, #searchDoAm, #searchDoAmDat {
+        width: 80px;
+        height: 20px;
+        border: solid 1.6px;
+        padding-left: 5px;
+        top: 30%;
+        left: 2%;
+        font-size: 10px;
+    }
+    #searchNhietDo {
+        left: 11%;
+    }
+    #searchDoAm {
+        left: 19%;
+    }
+    #searchButton {
+        width: 65px;
+        height: 18px;
+        top: 35%;
+        left: 50%;
+        font-size: 10px;
+    }
+    .data-back {
+        width: 320px;
+        height: 500px;
+        top: 40%;
+        left: 10%;
+
+    }
+    .data-table {
+        width: 100%;
+        font-size: 10px;
+    }
+    .data-table td {
+        padding: 5px;
+    }
 
     /*Thiết bị*/
     .table-container {

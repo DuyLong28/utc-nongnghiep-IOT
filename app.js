@@ -241,7 +241,7 @@ inputPassword.addEventListener("keyup", (e) => {
   }
 
     // Cập nhật dữ liệu sau mỗi khoảng thời gian
-    setInterval(fetchDataPeriodically, 60000); // Cập nhật dữ liệu sau mỗi x giây (x000 ms)
+    setInterval(fetchDataPeriodically, 1000); // Cập nhật dữ liệu sau mỗi x giây (x000 ms)
 
     // Tạo các trường tìm kiếm
     const searchThoiGian = document.getElementById('searchThoiGian');
@@ -303,4 +303,13 @@ inputPassword.addEventListener("keyup", (e) => {
         });
       }
     }
+    searchThoiGian.addEventListener("keyup", handleEnterKey);
+    searchNhietDo.addEventListener("keyup", handleEnterKey);
+    searchDoAm.addEventListener("keyup", handleEnterKey);
+    searchDoAmDat.addEventListener("keyup", handleEnterKey);
 
+    function handleEnterKey(e) {
+      if (e.key === "Enter") {
+        filterTable();
+      }
+    }

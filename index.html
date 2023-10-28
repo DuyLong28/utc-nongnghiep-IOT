@@ -10,6 +10,10 @@
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Tải thư viện Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 </head>
 <body>
     <div class="container">
@@ -121,12 +125,33 @@
                 </button>
         </div>
         <div id="phantich" class="content" style="display: none;">
-            <!-- Nội dung giám sát -->
+            <!-- Nội dung phân tích -->
             <p>Đây là nội dung phân tích.</p>
             </div>
-            <div id="dulieu" class="content" style="display: none;">
-            <!-- Nội dung giám sát -->
-            <p>Đây là nội dung dữ liệu.</p>
+        <div id="dulieu" class="content" style="display: none;">
+            <!-- Nội dung dữ liệu -->
+            <div class="timkiem-back">
+                <div class="h1-timkiem" style="font-weight: bold;font-size: 15px">Bộ lọc:</div>
+                <input type="text" id="searchThoiGian" placeholder="Thời gian">
+                <input type="text" id="searchNhietDo" placeholder="Nhiệt độ">
+                <input type="text" id="searchDoAm" placeholder="Độ ẩm">
+                <input type="text" id="searchDoAmDat" placeholder="Độ ẩm đất">
+                <button id="searchButton">Tìm kiếm</button>
+                <div id="noDataMessage" style="display: none; color: red; font-weight: bold;">Không có dữ liệu phù hợp</div>
+            </div>
+            <div class="data-back">
+                <table class="data-table">
+                    <tbody>
+                        <tr style="font-weight: bold;">
+                            <td style="width: 50px;">Lần đo</td>
+                            <td>Thời gian</td>
+                            <td>Nhiệt độ</td>
+                            <td>Độ ẩm không khí</td>
+                            <td>Độ ẩm đất</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div id="thietbi" class="content" style="display: none;">
             <div class="table-container">

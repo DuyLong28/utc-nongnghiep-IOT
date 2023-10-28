@@ -571,7 +571,77 @@ input:checked ~ .slider_led2 {
 }  
 .button_video:active .icon {
     transform: scale(0.95);
-}  
+} 
+
+/*Thuộc tính nội dung Dữ liệu*/
+.timkiem-back {
+    width: 1200px;
+    height: 100px;
+    border: solid 1px;
+    position: relative;
+    top: 10%;
+    left: 35%;
+}
+.h1-timkiem {
+    position: absolute;
+    bottom: 65%;
+    padding: 10px;
+}
+#searchThoiGian,#searchNhietDo,#searchDoAm,#searchDoAmDat {
+    width: 200px;
+    height: 30px;
+    border: solid 1.6px;
+    border-radius: 10px;
+    padding-left: 5px;
+    position: relative;
+    top: 35%;
+    left: 2%;
+}
+#searchNhietDo {
+    left: 11%;
+}
+#searchDoAm {
+    left: 21%;
+}
+#searchDoAmDat {
+    left: 30%;
+}
+#searchButton {
+    border-radius: 10px;
+    border: none;
+    width: 75px;
+    height: 25px;
+    position: relative;
+    top: 68%;
+    left: 25%;
+    background-color: #00BF63;
+}
+#searchButton:hover {
+    background-color: #009b50;
+}
+.data-back {
+    border: solid 1px;
+    width: 1200px;
+    height: 400px;
+    overflow: auto;
+    position: relative;
+    top: 70%;
+    left: 35%;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Để loại bỏ khoảng cách giữa ô */
+    position: relative;
+}
+.data-table td {
+    text-align: center; /* Căn giữa nội dung trong ô */
+    padding: 5px; /* Khoảng cách giữa nội dung và biên của ô */
+    border: 1px solid #000; /* Đường viền cho ô */
+}
+.hide-row {
+    display: none;
+}
+
 /*Thuộc tính nội dung Thiết bị*/
 .table-container {
     padding-top: 20%; /* Để tạo khoảng cách giữa bảng và phần nền */

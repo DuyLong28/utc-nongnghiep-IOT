@@ -519,6 +519,21 @@ input:checked ~ .slider-card_led2 {
 input:checked ~ .slider_led2 {
     background-color: #9ed99c;
 }
+/*Biểu đồ chung*/
+.linechart {
+    background-color: #f0f0f0;
+    width: 835px;
+    height: 423px;
+    position: relative;
+    bottom: 80%;
+    left: 420%;    
+}
+.text-chart {
+    position: relative;
+    top: 66%;
+    left: 45%;
+    font-size: 1.3rem;
+}
 /*Button xem video trực tiếp*/
 .button_video {
     background: #ff0000;
@@ -572,6 +587,39 @@ input:checked ~ .slider_led2 {
 .button_video:active .icon {
     transform: scale(0.95);
 } 
+
+/*Thuộc tính phân tích*/
+.dateRange {
+    width: 180px;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 350%;
+    left: 700%;
+}
+#dateRange {
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: solid 1px;
+    position: absolute;
+    top: 350%;
+    left: 900%;
+}
+.data-chart {
+    width: 620px;
+}
+#NhietDo, #DoAmDat {
+    position: absolute;
+    top: -10%;
+}
+#DoAmDat {
+    left: 630%;
+}
+#DoAmKK {
+    position: absolute;
+    top: 295%;
+}
 
 /*Thuộc tính nội dung Dữ liệu*/
 .timkiem-back {

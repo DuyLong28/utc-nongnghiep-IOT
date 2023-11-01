@@ -12,7 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -116,33 +115,17 @@
                     </div>
                 </label>
             </div>
-            <div class="linechart">
-                <canvas id="linechart"></canvas>
-                <div class="text-chart">Dữ liệu trong ngày</div>
-            </div>
-            <button class="button_video">
-                <div class="button_video_content" style="font-family: Arial;">Xem trực tiếp</div>
-                <a class="icon"  href="http://192.168.1.224/" target="_blank">
-                    <i class="fas fa-video"></i>
-                </a>
-            </button>
+                <button class="button_video">
+                    <div class="button_video_content" style="font-family: Arial;">Xem trực tiếp</div>
+                    <a class="icon"  href="http://192.168.1.224/" target="_blank">
+                        <i class="fas fa-video"></i>
+                    </a>
+                </button>
         </div>
         <div id="phantich" class="content" style="display: none;">
             <!-- Nội dung phân tích -->
-            <div>
-                <div class="dateRange">Hiển thị dữ liệu theo: </div>
-                <select id="dateRange">
-                  <option value="week">Tuần</option>
-                  <option value="month">Tháng</option>
-                  <option value="year">Năm</option>
-                </select>
+            <p>Đây là nội dung phân tích.</p>
             </div>
-            <div class="data-chart">
-                <canvas id="NhietDo"></canvas>
-                <canvas id="DoAmDat"></canvas>
-                <canvas id="DoAmKK"></canvas>
-            </div>
-        </div>
         <div id="dulieu" class="content" style="display: none;">
             <!-- Nội dung dữ liệu -->
             <div class="timkiem-back">
@@ -168,7 +151,6 @@
             </div>
         </div>
         <div id="thietbi" class="content" style="display: none;">
-            <!-- Nội dung thiết bị -->
             <div class="table-container">
                 <table class="device-table">
                     <tbody>
